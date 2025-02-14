@@ -1,0 +1,468 @@
+{
+    "test_data": [
+        {
+            "input": "Hey, how are you?",
+            "tag": "greeting"
+        },
+        {
+            "input": "Good morning!",
+            "tag": "greeting"
+        },
+        {
+            "input": "Can you list all files in this folder?",
+            "tag": "list_files"
+        },
+        {
+            "input": "Display the contents of this directory",
+            "tag": "list_files"
+        },
+        {
+            "input": "How can I navigate to another directory?",
+            "tag": "change_directory"
+        },
+        {
+            "input": "Switch to a different folder",
+            "tag": "change_directory"
+        },
+        {
+            "input": "What's my current location in the file system?",
+            "tag": "current_directory"
+        },
+        {
+            "input": "Tell me where I am right now",
+            "tag": "current_directory"
+        },
+        {
+            "input": "How do I make a new directory?",
+            "tag": "make_directory"
+        },
+        {
+            "input": "Create a folder here",
+            "tag": "make_directory"
+        },
+        {
+            "input": "How can I remove a directory?",
+            "tag": "remove_directory"
+        },
+        {
+            "input": "Delete this folder",
+            "tag": "remove_directory"
+        },
+        {
+            "input": "How do I duplicate a file?",
+            "tag": "copy_files"
+        },
+        {
+            "input": "Make a copy of this file",
+            "tag": "copy_files"
+        },
+        {
+            "input": "How do I move a file to another location?",
+            "tag": "move_files"
+        },
+        {
+            "input": "Transfer this file somewhere else",
+            "tag": "move_files"
+        },
+        {
+            "input": "How do I erase a file?",
+            "tag": "delete_files"
+        },
+        {
+            "input": "Remove this file permanently",
+            "tag": "delete_files"
+        },
+        {
+            "input": "How do I adjust file permissions?",
+            "tag": "file_permissions"
+        },
+        {
+            "input": "Change who can access this file",
+            "tag": "file_permissions"
+        },
+        {
+            "input": "How do I get help with a command?",
+            "tag": "help"
+        },
+        {
+            "input": "What's the command to display help?",
+            "tag": "help"
+        },
+        {
+            "input": "See you later!",
+            "tag": "goodbye"
+        },
+        {
+            "input": "Bye for now",
+            "tag": "goodbye"
+        },
+        {
+            "input": "How do I find a specific file?",
+            "tag": "search_files"
+        },
+        {
+            "input": "Locate a file in the system",
+            "tag": "search_files"
+        },
+        {
+            "input": "How do I search for text inside a file?",
+            "tag": "search_text"
+        },
+        {
+            "input": "Find a word in this file",
+            "tag": "search_text"
+        },
+        {
+            "input": "How do I install a new application?",
+            "tag": "install_software"
+        },
+        {
+            "input": "Install a program on my system",
+            "tag": "install_software"
+        },
+        {
+            "input": "How do I update all my software?",
+            "tag": "update_system"
+        },
+        {
+            "input": "Upgrade my system packages",
+            "tag": "update_system"
+        },
+        {
+            "input": "How do I check how much disk space is left?",
+            "tag": "disk_usage"
+        },
+        {
+            "input": "Show me the available disk space",
+            "tag": "disk_usage"
+        },
+        {
+            "input": "How do I find my IP address?",
+            "tag": "network_info"
+        },
+        {
+            "input": "Display my network configuration",
+            "tag": "network_info"
+        },
+        {
+            "input": "How do I view system details?",
+            "tag": "system_info"
+        },
+        {
+            "input": "Show me my system's hardware information",
+            "tag": "system_info"
+        },
+        {
+            "input": "How do I see what processes are running?",
+            "tag": "processes"
+        },
+        {
+            "input": "List all active processes",
+            "tag": "processes"
+        },
+        {
+            "input": "How do I terminate a process?",
+            "tag": "kill_process"
+        },
+        {
+            "input": "Stop this process immediately",
+            "tag": "kill_process"
+        },
+        {
+            "input": "How do I open a file for editing?",
+            "tag": "edit_file"
+        },
+        {
+            "input": "Edit this text file",
+            "tag": "edit_file"
+        },
+        {
+            "input": "How do I check the permissions of a file?",
+            "tag": "file_permissions_check"
+        },
+        {
+            "input": "Show me the permissions for this file",
+            "tag": "file_permissions_check"
+        },
+        {
+            "input": "How do I zip a folder?",
+            "tag": "compress_files"
+        },
+        {
+            "input": "Compress these files into an archive",
+            "tag": "compress_files"
+        },
+        {
+            "input": "How do I unzip a tar file?",
+            "tag": "extract_files"
+        },
+        {
+            "input": "Extract files from this archive",
+            "tag": "extract_files"
+        },
+        {
+            "input": "How do I create a shortcut to a file?",
+            "tag": "create_symlink"
+        },
+        {
+            "input": "Make a symbolic link for this file",
+            "tag": "create_symlink"
+        },
+        {
+            "input": "How do I change permissions for all files in a folder?",
+            "tag": "update_permissions_recursive"
+        },
+        {
+            "input": "Recursively update permissions in this directory",
+            "tag": "update_permissions_recursive"
+        },
+        {
+            "input": "How do I view system logs?",
+            "tag": "view_logs"
+        },
+        {
+            "input": "Show me the system log files",
+            "tag": "view_logs"
+        },
+        {
+            "input": "How do I set a new environment variable?",
+            "tag": "set_environment_variable"
+        },
+        {
+            "input": "Add a new environment variable",
+            "tag": "set_environment_variable"
+        },
+        {
+            "input": "How do I check how much memory is being used?",
+            "tag": "check_memory_usage"
+        },
+        {
+            "input": "Show me the current RAM usage",
+            "tag": "check_memory_usage"
+        },
+        {
+            "input": "How do I monitor CPU usage?",
+            "tag": "check_cpu_usage"
+        },
+        {
+            "input": "Display the CPU usage in real time",
+            "tag": "check_cpu_usage"
+        },
+        {
+            "input": "How do I add a new user to the system?",
+            "tag": "create_user"
+        },
+        {
+            "input": "Create a new user account",
+            "tag": "create_user"
+        },
+        {
+            "input": "How do I remove a user from the system?",
+            "tag": "delete_user"
+        },
+        {
+            "input": "Delete a user account",
+            "tag": "delete_user"
+        },
+        {
+            "input": "How do I check how long the system has been running?",
+            "tag": "check_uptime"
+        },
+        {
+            "input": "Show me the system uptime",
+            "tag": "check_uptime"
+        },
+        {
+            "input": "How do I turn off the computer?",
+            "tag": "shutdown_system"
+        },
+        {
+            "input": "Shut down the system now",
+            "tag": "shutdown_system"
+        },
+        {
+            "input": "How do I restart the computer?",
+            "tag": "reboot_system"
+        },
+        {
+            "input": "Reboot the system immediately",
+            "tag": "reboot_system"
+        },
+        {
+            "input": "How do I check which ports are open?",
+            "tag": "check_open_ports"
+        },
+        {
+            "input": "List all open network ports",
+            "tag": "check_open_ports"
+        },
+        {
+            "input": "How do I monitor the health of my hard drive?",
+            "tag": "check_disk_health"
+        },
+        {
+            "input": "Check the status of my disk",
+            "tag": "check_disk_health"
+        },
+        {
+            "input": "How do I mount an external drive?",
+            "tag": "mount_drive"
+        },
+        {
+            "input": "Mount a USB drive",
+            "tag": "mount_drive"
+        },
+        {
+            "input": "How do I change the system's hostname?",
+            "tag": "change_hostname"
+        },
+        {
+            "input": "Modify the hostname of this system",
+            "tag": "change_hostname"
+        },
+        {
+            "input": "How do I start a system service?",
+            "tag": "service_management"
+        },
+        {
+            "input": "Stop a running service",
+            "tag": "service_management"
+        },
+        {
+            "input": "How do I schedule a task to run periodically?",
+            "tag": "cron_jobs"
+        },
+        {
+            "input": "Edit my cron jobs",
+            "tag": "cron_jobs"
+        },
+        {
+            "input": "How do I connect to a remote server using SSH?",
+            "tag": "ssh_connection"
+        },
+        {
+            "input": "SSH into a remote machine",
+            "tag": "ssh_connection"
+        },
+        {
+            "input": "How do I create a shortcut for a command?",
+            "tag": "alias_command"
+        },
+        {
+            "input": "Make an alias for this command",
+            "tag": "alias_command"
+        },
+        {
+            "input": "How do I monitor the output of a command continuously?",
+            "tag": "watch_command"
+        },
+        {
+            "input": "Watch the output of this command in real time",
+            "tag": "watch_command"
+        },
+        {
+            "input": "How do I check which packages are installed?",
+            "tag": "inspect_package"
+        },
+        {
+            "input": "Show me the version of this package",
+            "tag": "inspect_package"
+        },
+        {
+            "input": "How do I partition a hard drive?",
+            "tag": "disk_partition"
+        },
+        {
+            "input": "Manage disk partitions",
+            "tag": "disk_partition"
+        },
+        {
+            "input": "How do I configure the firewall?",
+            "tag": "firewall_configuration"
+        },
+        {
+            "input": "Open a specific port in the firewall",
+            "tag": "firewall_configuration"
+        },
+        {
+            "input": "How do I set up a Python virtual environment?",
+            "tag": "python_env_setup"
+        },
+        {
+            "input": "Create a virtual environment for Python",
+            "tag": "python_env_setup"
+        },
+        {
+            "input": "How do I run a Docker container?",
+            "tag": "docker_commands"
+        },
+        {
+            "input": "Pull a Docker image",
+            "tag": "docker_commands"
+        },
+        {
+            "input": "How do I initialize a Git repository?",
+            "tag": "git_commands"
+        },
+        {
+            "input": "Commit changes to a Git repository",
+            "tag": "git_commands"
+        },
+        {
+            "input": "How do I schedule a script to run every 15 minutes?",
+            "tag": "cron_advanced"
+        },
+        {
+            "input": "Check the logs for cron jobs",
+            "tag": "cron_advanced"
+        },
+        {
+            "input": "How do I update the Grub configuration?",
+            "tag": "bootloader_info"
+        },
+        {
+            "input": "Change the default OS in Grub",
+            "tag": "bootloader_info"
+        },
+        {
+            "input": "How do I install VirtualBox on my system?",
+            "tag": "virtualization"
+        },
+        {
+            "input": "Use KVM for virtualization",
+            "tag": "virtualization"
+        },
+        {
+            "input": "How do I configure LDAP authentication?",
+            "tag": "ldap_authentication"
+        },
+        {
+            "input": "Join this system to an LDAP domain",
+            "tag": "ldap_authentication"
+        },
+        {
+            "input": "How do I set up Nginx?",
+            "tag": "nginx_setup"
+        },
+        {
+            "input": "Host a website using Nginx",
+            "tag": "nginx_setup"
+        },
+        {
+            "input": "How do I connect to Wi-Fi using the terminal?",
+            "tag": "wireless_config"
+        },
+        {
+            "input": "Use wpa_supplicant to connect to Wi-Fi",
+            "tag": "wireless_config"
+        },
+        {
+            "input": "How do I create an LVM partition?",
+            "tag": "lvm_management"
+        },
+        {
+            "input": "Extend the size of an LVM volume",
+            "tag": "lvm_management"
+        }
+    ]
+}
