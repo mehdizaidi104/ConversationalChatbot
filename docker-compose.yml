@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  db:
+    # We use an image that comes with postgres AND pgvector pre-installed
+    image: ankane/pgvector
+    container_name: chatbot_db
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      # Mounts the init.sql file to run on first-time setup
+      - ./db-init/init.sql:/docker-entrypoint-initdb.d/init.sql
+      # Persists the database data on your local disk
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432" # Expose DB port to your host (optional, for debugging)
+
+  api:
+    container_name: chatbot_api
+    build: ./services/api  # Tells Docker to build from the api/ Dockerfile
+    restart: always
+    depends_on:
+      - db # Doesn't start the API until the DB is ready
+    ports:
+      - "8000:8000" # Exposes the API on port 8000
+    environment:
+      # Passes the .env variables to the API container
+      DATABASE_URL: "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}"
+      # 'db' is the service name from this file
+
+  frontend:
+    container_name: chatbot_frontend
+    build: ./services/frontend
+    restart: always
+    depends_on:
+      - api # Doesn't start the UI until the API is ready
+    ports:
+      - "8501:8501" # Exposes Streamlit on port 8501
+    environment:
+      API_URL: "http://api:8000/predict"
+      # 'api' is the service name, '8000' is the port *inside* the Docker network
+
+volumes:
+  postgres_data:
